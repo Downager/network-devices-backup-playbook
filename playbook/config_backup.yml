@@ -18,9 +18,7 @@
    - debug: var=print_output.stdout_lines
 
    - name: Save content to a file
-     lineinfile: 
-      dest: /etc/ansible/device_config/{{ inventory_hostname }}.ios
-      line: "{{ item }}"
+     local_action: copy content="{{ item }}" dest="/etc/ansible/device_config/{{ inventory_hostname }}.ios"
      with_items:
       - "{{ print_output.stdout[0] }}"
       - "{{ print_output.stdout[1] }}"
