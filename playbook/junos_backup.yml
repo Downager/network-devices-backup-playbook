@@ -5,7 +5,7 @@
 
   tasks:
     - name: BACKUP THE CONFIG
-      ios_config:
+      junos_config:
         backup: yes
         backup_options:
           dir_path: "/etc/ansible/device_config/"
