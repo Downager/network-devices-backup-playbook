@@ -10,4 +10,6 @@
         backup_options:
           dir_path: "/etc/ansible/device_config/"
           filename: "{{ inventory_hostname }}.jun"
+        provider: 
+          connection: network_cli
       register: config_output
