@@ -5,7 +5,7 @@
 
   tasks:
     - name: BACKUP THE CONFIG
-      eos_config:
+      ios_config:
         backup: yes
       register: config_output
 
