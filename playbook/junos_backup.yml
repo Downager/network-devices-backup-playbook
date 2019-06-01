@@ -1,6 +1,6 @@
 ---
-- name: BACKUP IOS CONFIGURATIONS
-  hosts: cisco
+- name: BACKUP JUNOS CONFIGURATIONS
+  hosts: juniper
   gather_facts: no
 
   tasks:
@@ -9,5 +9,5 @@
         backup: yes
         backup_options:
           dir_path: "/etc/ansible/device_config/"
-          filename: "{{ inventory_hostname }}.ios"
+          filename: "{{ inventory_hostname }}.jun"
       register: config_output
