@@ -1,0 +1,15 @@
+---
+- name: BACKUP ROUTER CONFIGURATIONS
+  hosts: cisco
+  gather_facts: no
+
+  tasks:
+    - name: BACKUP THE CONFIG
+      eos_config:
+        backup: yes
+      register: config_output
+
+    - name: RENAME BACKUP
+      copy:
+        src: "{{config_output.backup_path}}"
+        dest: "/etc/ansible/device_config/{{ inventory_hostname }}.ios"
