@@ -5,9 +5,7 @@
 
   tasks:
     - name: BACKUP THE CONFIG
-      junos_command:
-        commands:
-        - show configuration | display set | no-more
+      raw: "show configuration | display set | no-more"
       register: config_output
     
     - name: COPY FILE TO DEVICE_CONFIG
