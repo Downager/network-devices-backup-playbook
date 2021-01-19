@@ -1,0 +1,24 @@
+[cisco:vars]
+ansible_connection=local 
+ansible_user=user #FIXME: Replace This!
+ansible_ssh_pass=p@ssw0rd #FIXME: Replace This!
+
+
+[juniper:vars]
+ansible_connection=local
+ansible_user=user #FIXME: Replace This!
+ansible_ssh_pass=p@ssw0rd #FIXME: Replace This!
+
+[juniper]
+I1F-A01
+I1F-A02
+I3F-A01
+I3F-A02
+
+[cisco]
+I1F-B01
+I2F-B01
+I3F-B01
+I3F-B02
+I4F-B01
+I4F-B02
